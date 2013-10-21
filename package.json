@@ -1,0 +1,25 @@
+{
+  "name": "books-frontend",
+  "version": "0.1.0",
+  "description": "BookApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauramro/books-frontend.git"
+  },
+  "author": "Mauricio Ramirez",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mauramro/books-frontend/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.5.0",
+    "connect-livereload": "~0.3.0"
+  }
+}

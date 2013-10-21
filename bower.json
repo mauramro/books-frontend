@@ -1,0 +1,20 @@
+{
+  "name": "books-frontend",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mauramro/books-frontend",
+  "authors": [
+    "Mauricio Ramirez <mau.ram.ro@gmail.com>"
+  ],
+  "description": "BookApp",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendors",
+    "app/vendors",
+    "test",
+    "tests"
+  ]
+}
