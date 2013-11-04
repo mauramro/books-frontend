@@ -64,7 +64,7 @@ module.exports = function(grunt) {
   });
 
   //Web Server
-  grunt.loadNpmTasks('connect-livereload');
+  /*grunt.loadNpmTasks('connect-livereload');*/
   grunt.loadNpmTasks('grunt-contrib-connect');
   
 
