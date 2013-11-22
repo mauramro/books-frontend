@@ -61,12 +61,21 @@ module.exports = function(grunt) {
           }
         },
       },
+    mochacli: {
+      src : 'test/test.js',
+      options: {
+        reporter: 'spec'
+       /* bail: true*/
+      }
+    }
   });
 
   //Web Server
   /*grunt.loadNpmTasks('connect-livereload');*/
   grunt.loadNpmTasks('grunt-contrib-connect');
   
+  //Mocha
+  grunt.loadNpmTasks('grunt-mocha-cli');
 
   //Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -76,6 +85,6 @@ module.exports = function(grunt) {
   /*grunt.registerTask('default', ['uglify']);*/
 
   grunt.registerTask('server', ['connect', 'watch']);
-
+  grunt.registerTask('test', ['mochacli']);
 
 };

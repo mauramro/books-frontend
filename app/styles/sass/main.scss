@@ -1,0 +1,28 @@
+body{
+	div{
+		ul#test{
+			display:block;
+			li{
+				float:left;
+				border: 1px solid black;
+				background: grey;
+				width: 100px;
+				list-style-type: none;
+				text-align:center;
+				padding:20px 0;
+				transition: background 2s;
+			/*	-webkit-transition: background 2s;*/
+				&:hover{
+					background: white;
+					color: red;
+				}
+				&:first-child{
+					border-radius: 10px 0 0 10px;
+				}
+				&:last-child{
+					border-radius: 0 10px 10px 0;
+				}
+			}
+		}
+	}
+}
