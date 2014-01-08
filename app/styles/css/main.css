@@ -1,19 +1,448 @@
-body div ul#test {
-  display: block; }
-  body div ul#test li {
-    float: left;
-    border: 1px solid black;
-    background: grey;
-    width: 100px;
-    list-style-type: none;
-    text-align: center;
-    padding: 20px 0;
-    transition: background 2s;
-    /*	-webkit-transition: background 2s;*/ }
-    body div ul#test li:hover {
-      background: white;
-      color: red; }
-    body div ul#test li:first-child {
-      border-radius: 10px 0 0 10px; }
-    body div ul#test li:last-child {
-      border-radius: 0 10px 10px 0; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../sass/_base.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../sass/_base.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/_base.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/_base.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/_base.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../sass/_base.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/_base.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 49, ../sass/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 52, ../sass/_base.scss */
+.clear {
+  clear: both;
+}
+
+/* line 59, ../sass/_base.scss */
+body {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #eaedf1;
+  padding: 50px 0;
+}
+
+/* line 67, ../sass/_base.scss */
+h2 {
+  font-size: 2.083em;
+}
+
+/* line 98, sprites/*.png */
+.sprites-sprite, .sprites-books-app-arrange-2, .sprites-books-app-arrange, .sprites-books-app-book, .sprites-books-app-search, .sprites-books-app-user {
+  background: url('../../img/sprites-s47f9622634.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-books-app-arrange-2 {
+  background-position: 0 -158px;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-books-app-arrange {
+  background-position: 0 -182px;
+  height: 20px;
+  width: 28px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-books-app-book {
+  background-position: 0 -136px;
+  height: 22px;
+  width: 19px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-books-app-search {
+  background-position: 0 -56px;
+  height: 32px;
+  width: 31px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-books-app-user {
+  background-position: 0 -112px;
+  height: 24px;
+  width: 25px;
+}
+
+/* line 9, ../sass/main.scss */
+body header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #323a45;
+  z-index: 1;
+}
+/* line 15, ../sass/main.scss */
+body header > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* line 18, ../sass/main.scss */
+body header > div > a {
+  font-size: 1.5em;
+  color: #f1f1f3;
+  line-height: 20px;
+  float: left;
+  padding: 15px 15px;
+  margin-left: 3.270564915758176%;
+}
+/* line 26, ../sass/main.scss */
+body header > div nav {
+  float: right;
+  /*margin-right: 63px;*/
+}
+/* line 31, ../sass/main.scss */
+body header > div nav ul li {
+  width: 77px;
+  height: 49px;
+  /*background-color: white;*/
+  float: left;
+  text-indent: -9999px;
+}
+/* line 37, ../sass/main.scss */
+body header > div nav ul li a {
+  /*color: white;*/
+  height: 100%;
+  display: block;
+  padding-top: 1px;
+}
+/* line 42, ../sass/main.scss */
+body header > div nav ul li a span {
+  display: block;
+  margin: 0 auto;
+  margin-top: 8px;
+  /*&:hover{
+  	background-color: grey;
+  }*/
+}
+/* line 46, ../sass/main.scss */
+body header > div nav ul li a span.sprites-books-app-arrange {
+  margin-top: 14px;
+}
+/* line 49, ../sass/main.scss */
+body header > div nav ul li a span.sprites-books-app-arrange-2 {
+  margin-top: 12px;
+}
+/* line 56, ../sass/main.scss */
+body header > div nav ul li a:hover {
+  background-color: grey;
+}
+/* line 58, ../sass/main.scss */
+body header > div nav ul li a:hover:hover span {
+  /*background-color: red;*/
+}
+/* line 64, ../sass/main.scss */
+body header > div nav ul li.last-nav {
+  text-indent: 0;
+}
+/* line 69, ../sass/main.scss */
+body header > div div.user {
+  float: right;
+  line-height: 50px;
+  margin: 0 30px;
+}
+/* line 73, ../sass/main.scss */
+body header > div div.user p {
+  color: #fff;
+  float: left;
+  font-size: 18px;
+  position: relative;
+}
+/* line 78, ../sass/main.scss */
+body header > div div.user p img {
+  position: relative;
+  top: 5px;
+}
+/* line 83, ../sass/main.scss */
+body header > div div.user button {
+  background: #2e9950;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin-left: 30px;
+  -webkit-transform: rotate(5deg);
+  transition: 1s;
+}
+/* line 93, ../sass/main.scss */
+body header > div div.user button:hover {
+  opacity: 0.8;
+  -webkit-transform: rotate(0deg);
+}
+/* line 101, ../sass/main.scss */
+body div.main_container {
+  margin: 0 auto;
+  width: 1200px;
+}
+/* line 104, ../sass/main.scss */
+body div.main_container div.content {
+  margin: 0 auto;
+  /*width: 78.828125%; //1280/1009*/
+  					/*header{
+  	background-color: #323a45;
+  	height: 77px;
+  	h2{
+  		color: #f1f1f3;
+  		line-height: 77px;
+  		float:left;
+  		margin-left: 3.270564915758176%; //1009/33
+  		margin-right: 33.30029732408325%; //1009/336
+  	}
+  	nav{
+  		ul{
+  			float:left;
+  			li{
+  				width: 77px;
+  				height: 77px;
+  				background-color: white;
+  				float:left;
+  				text-indent: -9999px;
+  				a{
+  					/*color: white;
+  					display:block;
+  				}
+  				a:hover{
+  					background-color: #202226;
+  				}
+  			}
+  			li.last-nav{
+  				text-indent:0;
+  			}
+  		}
+  	}
+  }*/
+}
+/* line 140, ../sass/main.scss */
+body div.main_container div.content section.books {
+  padding: 40px 15px 48px 15px;
+  /*padding:39px 3.0723488602576808%; //1009 / 33;*/
+  background-color: #f9fafc;
+  margin-bottom: 60px;
+}
+/* line 145, ../sass/main.scss */
+body div.main_container div.content section.books ul {
+  /*li:nth-child(3n+1){
+  	margin-left: 0;
+  }*/
+}
+/* line 146, ../sass/main.scss */
+body div.main_container div.content section.books ul > li {
+  width: 30.4%;
+  text-align: center;
+  /*width: 291px;*/
+  /*height: 417px;*/
+  background-color: #f9fafc;
+  float: left;
+  border: 2px solid #edf0f4;
+  /*margin-left: 3.1762295081967214%;*/
+  margin-bottom: 33px;
+  margin: 0 15px 30px 15px;
+  padding-top: 15px;
+}
+/* line 158, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > div {
+  padding: 0 15px;
+}
+/* line 160, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > div img {
+  width: 100%;
+  margin-bottom: 25px;
+  /*margin: 15px 15px 0 15px;*/
+}
+/* line 165, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > div h2 {
+  color: #c2c2c2;
+  margin-bottom: 15px;
+  /*margin: 31px 15px 15px 15px;*/
+}
+/* line 170, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > div p {
+  /*font-size: 1.250em;*/
+  margin-bottom: 15px;
+  /*margin:0 15px 23px 15px;*/
+}
+/* line 176, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > a {
+  height: 25px;
+  background-color: #1fbb86;
+  display: block;
+  /*padding:20px  7.560137457044673%;*/
+  padding: 15px 20px;
+  text-align: left;
+}
+/* line 183, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > a span {
+  display: inline-block;
+}
+/* line 186, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > a .sprites-books-app-book {
+  float: right;
+}
+/* line 189, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > a p {
+  display: inline;
+  margin: 0 122px 0 22px;
+  position: relative;
+  bottom: 4px;
+}
+/* line 195, ../sass/main.scss */
+body div.main_container div.content section.books ul > li > a:hover {
+  background-color: grey;
+  color: black;
+}
+/* line 207, ../sass/main.scss */
+body div.main_container div.content section.pagination ul {
+  display: block;
+  margin: 0 auto;
+  width: 232px;
+}
+/* line 211, ../sass/main.scss */
+body div.main_container div.content section.pagination ul li {
+  float: left;
+  height: 55px;
+  width: 58px;
+  display: block;
+  /*padding: 15px;*/
+  background-color: #ffffff;
+  color: #5e6d81;
+}
+/* line 219, ../sass/main.scss */
+body div.main_container div.content section.pagination ul li a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  line-height: 58px;
+  border-right: 1px solid #ececec;
+}
+/* line 225, ../sass/main.scss */
+body div.main_container div.content section.pagination ul li a canvas {
+  width: 100%;
+}
+/* line 229, ../sass/main.scss */
+body div.main_container div.content section.pagination ul li:hover {
+  background-color: grey;
+}
+
+/* line 239, ../sass/main.scss */
+#test {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  /*width: 40%;*/
+  /*height: 300px;*/
+  /*margin:0 auto;*/
+  background-color: #2980b9;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 6px 6px 13px -3px #000;
+}
+/* line 251, ../sass/main.scss */
+#test form {
+  padding: 30px;
+}
+/* line 253, ../sass/main.scss */
+#test form input {
+  margin-bottom: 20px;
+}
+/* line 256, ../sass/main.scss */
+#test form input:last-child {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  /*position:relative;*/
+  /*top:40px;
+  right:100px;*/
+  /*margin-bottom:30px;*/
+  /*padding: 10px;*/
+  /*border-radius: 10px;*/
+}
+/* line 269, ../sass/main.scss */
+#test form input:last-child:hover {
+  opacity: 0.7;
+}
+
+/* line 276, ../sass/main.scss */
+.open {
+  opacity: 0.6;
+  /*background-color: red;*/
+}
+
+/* line 280, ../sass/main.scss */
+.closed {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* line 4, ../sass/_1200.scss */
+  body div.main_container {
+    width: 970px;
+  }
+  /* line 9, ../sass/_1200.scss */
+  body div.main_container div.content section.books ul li {
+    width: 29.4%;
+  }
+}
