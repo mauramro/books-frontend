@@ -14,12 +14,9 @@ module.exports = function(grunt) {
       css: {
         files: ['app/styles/css/{,*/}*.css'],
       },
-      sass: {
+       compass: {
         files: ['app/styles/sass/{,*/}*.scss'],
-        tasks: ['sass:compile'],
-        options: {
-          livereload:true,
-        }
+        tasks: ['compass:server']
       },
       livereload: {
         options: {
@@ -36,19 +33,26 @@ module.exports = function(grunt) {
     },
 
       //Sass
-    sass: {
-      compile: {
+    compass: {
         options: {
-          style: 'nested'
+            sassDir: 'app/styles/sass',
+            cssDir: 'app/styles/css',
+            generatedImagesDir: 'app/img',
+            imagesDir: 'app/img',
+            javascriptsDir: 'app/js',
+            fontsDir: 'app/css/fonts',
+            importPath: 'app/js/vendor',
+            httpImagesPath: 'app/img',
+            httpGeneratedImagesPath: 'app/img',
+            httpFontsPath: 'app/css/fonts',
+            relativeAssets: true,
+            noLineComments: false
         },
-        files: [{
-          expand: true,
-          cwd: 'app/styles/sass',
-          src: ['*.scss'],
-          dest: 'app/styles/css',
-          ext: '.css'
-        }]
-      }
+        server: {
+            options: {
+              debugInfo: false
+            }
+        }
     },
       //Web server
     connect: {
@@ -70,7 +74,7 @@ module.exports = function(grunt) {
 
   //Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Default task(s).
   /*grunt.registerTask('default', ['uglify']);*/
