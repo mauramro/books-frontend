@@ -63,14 +63,33 @@ module.exports = function(grunt) {
           livereload: true,
           open:true
           }
-        },
+        }
       },
+      //Build
+    uglify: {
+      target: {
+        files: {
+          'app/js/main.min.js' : ['app/js/main.js']
+        }
+      }
+    },
+    cssmin : {
+      combine :{
+         files: {
+        'app/styles/css/main.min.css' : ['app/styles/css/main.css']
+      }
+      }
+    }
   });
 
   //Web Server
   /*grunt.loadNpmTasks('connect-livereload');*/
   grunt.loadNpmTasks('grunt-contrib-connect');
   
+
+  //Build
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   //Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -80,6 +99,7 @@ module.exports = function(grunt) {
   /*grunt.registerTask('default', ['uglify']);*/
 
   grunt.registerTask('server', ['connect', 'watch']);
+  grunt.registerTask('build', ['uglify', 'cssmin']);
 
 
 };
