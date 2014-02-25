@@ -6,5 +6,6 @@ body {
 /* line 5, ../sass/main.scss */
 p {
   color: red;
-  background-color: red;
+  background-color: blue;
+  border-radius: 20px;
 }

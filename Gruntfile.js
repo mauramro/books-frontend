@@ -1,4 +1,5 @@
 'use strict';
+
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
@@ -6,14 +7,19 @@ var mountFolder = function (connect, dir) {
 };
 module.exports = function(grunt) {
 
+  //show elapset time at the end
+  require('time-grunt')(grunt);
+
+ ///load tasks
+ require('load-grunt-tasks')(grunt);
+
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     //  Watch
     watch:{
-      css: {
-        files: ['app/styles/css/{,*/}*.css'],
-      },
        compass: {
         files: ['app/styles/sass/{,*/}*.scss'],
         tasks: ['compass:server']
@@ -32,7 +38,7 @@ module.exports = function(grunt) {
       }
     },
 
-      //Sass
+      //Compass
     compass: {
         options: {
             sassDir: 'app/styles/sass',
@@ -77,29 +83,33 @@ module.exports = function(grunt) {
       combine :{
          files: {
         'app/styles/css/main.min.css' : ['app/styles/css/main.css']
+        }
       }
+    },
+
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      }
+    },
+    mochaTest: {
+      test: {
+        options: {
+          require: ['chai'],
+          reporter: 'spec'
+        },
+        src: ['test/spec/test.spec.js']
       }
     }
   });
-
-  //Web Server
-  /*grunt.loadNpmTasks('connect-livereload');*/
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  
-
-  //Build
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-
-  //Watch
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Default task(s).
   /*grunt.registerTask('default', ['uglify']);*/
 
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('build', ['uglify', 'cssmin']);
+  grunt.registerTask('kar', ['karma']);
+  grunt.registerTask('test', ['mochaTest']);
 
 
 };
