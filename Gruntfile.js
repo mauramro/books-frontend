@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     //  Watch
     watch:{
        compass: {
-        files: ['app/styles/sass/{,*/}*.scss'],
+        files: ['app/styles/scss/{,*/}*.scss'],
         tasks: ['compass:server']
       },
       livereload: {
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         files: [
           'app/**.html',
           'app/styles/css/{,*/}*.css',
-          'app/styles/sass/{,*/}*.scss',
+          'app/styles/scss/{,*/}*.scss',
           'app/js/{,*/}*.js',
           'app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
       //Compass
     compass: {
         options: {
-            sassDir: 'app/styles/sass',
+            sassDir: 'app/styles/scss',
             cssDir: 'app/styles/css',
             generatedImagesDir: 'app/img',
             imagesDir: 'app/img',
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
     cssmin : {
       combine :{
          files: {
-        'app/styles/css/main.min.css' : ['app/styles/css/main.css']
+        'app/styles/css/Ribs.min.css' : ['app/styles/css/Ribs.css']
         }
       }
     },
