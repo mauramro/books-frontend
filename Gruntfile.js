@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         ]
       }
     },
-    
+
     compass: {
         options: {
             sassDir: 'app/styles/sass',
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          hostname:'127.0.0.1',
+          hostname:'localhost',
           base: 'app',
           livereload: true,
           open:true
