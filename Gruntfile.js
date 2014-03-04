@@ -82,7 +82,7 @@ module.exports = function(grunt) {
     cssmin : {
       combine :{
          files: {
-        'app/styles/css/Ribs.min.css' : ['app/styles/css/Ribs.css']
+        'app/styles/css/skeleton.min.css' : ['app/styles/css/skeleton.css']
         }
       }
     },
