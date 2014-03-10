@@ -1,21 +1,5 @@
 /*function login(){*/
 
-$("button").on("click", function(event){
-  event.preventDefault();
-  var container = $(".main_container");
-  $("#test").slideToggle();
-  if(container.hasClass( "closed")){
-    $(container).removeClass( "closed" );
-    $(container).addClass("open");
-  } else {
-    $(container).removeClass("open");
-      $(container).addClass( 'closed' );
-  }
-});
-
-$(document).mouseup(function (e)
-
-
   function hasClass(element, cls) {
     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
   }
@@ -66,7 +50,6 @@ $(document).mouseup(function (e)
 };
 
 /*$(document).mouseup(function (e)
->>>>>>> master
 {
     var container = $("#test");
 
@@ -74,14 +57,7 @@ $(document).mouseup(function (e)
         && container.has(e.target).length === 0) // ... nor a descendant of the container
     {
         container.slideUp();
-<<<<<<< HEAD
-        $(".main_container").addClass('closed');
-    }
-});
-/*}*/
-
         $(".container").addClass('closed');
     }
 });*/
 /*}*/
-

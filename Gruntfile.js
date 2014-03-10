@@ -24,9 +24,6 @@ module.exports = function(grunt) {
       css: {
         files: ['app/styles/css/{,*/}*.css'],
       },
-      compass: {
-        files: ['app/styles/sass/{,*/}*.scss'],
-
        compass: {
         files: ['app/styles/scss/{,*/}*.scss'],
 
@@ -47,9 +44,9 @@ module.exports = function(grunt) {
     },
 
 
-    compass: {
+    /*compass: {
         options: {
-            sassDir: 'app/styles/sass',
+            sassDir: 'app/styles/sass',*/
 
 
       //Compass
@@ -88,22 +85,15 @@ module.exports = function(grunt) {
         }
       },
 
-    mochacli: {
+   /* mochacli: {
       src : 'test/test.js',
       options: {
         reporter: 'spec'
-       /* bail: true*/
+       /* bail: true
       }
-    }
-  });
+    }*/
 
-  //Web Server
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  //Mocha
-  grunt.loadNpmTasks('grunt-mocha-cli');
-  //Watch
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+
 
       //Build
     uglify: {
