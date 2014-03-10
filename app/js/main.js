@@ -1,18 +1,72 @@
 /*function login(){*/
+
 $("button").on("click", function(event){
-	event.preventDefault();
-	var container = $(".main_container");
-	$("#test").slideToggle();
-	if(container.hasClass( "closed")){
+  event.preventDefault();
+  var container = $(".main_container");
+  $("#test").slideToggle();
+  if(container.hasClass( "closed")){
     $(container).removeClass( "closed" );
     $(container).addClass("open");
-	} else {
-		$(container).removeClass("open");
-	    $(container).addClass( 'closed' );
-	}
+  } else {
+    $(container).removeClass("open");
+      $(container).addClass( 'closed' );
+  }
 });
 
 $(document).mouseup(function (e)
+
+
+  function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+  }
+
+   Element.prototype.toggle = function() {
+    if ( this.style.display == '' || this.style.display == 'none' ) {
+        //alert ( "Changing display to NONE ");
+        this.style.display = 'block';
+    }else{
+        this.style.display = 'none';
+        //alert ( "Changing display to BLOCK ");
+      }
+    }
+
+  console.log(document.getElementsByTagName("button")[0]);
+  document.getElementsByTagName("button")[0].onclick = function(event){
+  event.preventDefault();
+  //console.log("test");
+
+
+
+  var container = document.getElementsByClassName("container")[1];
+  var login = document.getElementById("test");
+
+  if(hasClass(container, 'closed') == true){
+    container.className = '';
+    container.className = 'container , open';
+    login.toggle();
+    //alert("clos");
+  }else{
+    container.className = 'container , closed';
+    login.toggle();
+  }
+
+
+  /*if(container.hasClass() = "closed"){
+    alert("test");
+  }*/
+
+  //document.getElementById("#test").slideToggle();
+ /* if(container.hasClass(container, "closed")){
+    $(container).removeClass(container, "closed" );
+    $(container).addClass(container, "open");
+  } else {
+    $(container).removeClass(container, "open");
+      $(container).addClass(container, 'closed');
+  }*/
+};
+
+/*$(document).mouseup(function (e)
+>>>>>>> master
 {
     var container = $("#test");
 
@@ -20,7 +74,14 @@ $(document).mouseup(function (e)
         && container.has(e.target).length === 0) // ... nor a descendant of the container
     {
         container.slideUp();
+<<<<<<< HEAD
         $(".main_container").addClass('closed');
     }
 });
 /*}*/
+
+        $(".container").addClass('closed');
+    }
+});*/
+/*}*/
+

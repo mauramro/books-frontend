@@ -18,7 +18,12 @@
   ],
   "dependencies": {
     "jquery": "~2.0.3",
+
     "modernizr": "~2.6.3"
+
+    "modernizr": "~2.6.3",
+    "requirejs": "~2.1.9"
+
   },
   "devDependencies": {
     "skeleton-sass": "*"
