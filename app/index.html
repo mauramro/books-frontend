@@ -1,92 +1,170 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+       <!--  <meta name="description" content=""> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Basic Page Needs
-  ================================================== -->
-    <meta charset="utf-8">
-    <title>Your Page Title Here</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Mobile Specific Metas
-  ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-  ================================================== -->
-    <link rel="stylesheet" href="styles/css/skeleton.css">
-
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-
-</head>
-<body>
-
-    <!-- Primary Page Layout
-    ================================================== -->
-
-    <!-- Delete everything in this .container and get started on your own site! -->
-
-    <header>
-        <div>
-          <a>Hangar Book's</a>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" type="text/css" href="styles/css/font-awesome.css">
+        <link rel="stylesheet" href="styles/css/normalize.css">
+        <link rel="stylesheet" href="styles/css/main.css">
+        <!-- <script src="js/vendor/jquery/jquery.js"></script> -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+             <header>
+                <div class="container">
+                    <a href="">Hangar Book's</a>
+                    <div class="user">
+                        <p>Username<i class="fa fa-user fa-lg"></i></p>
+                        <button>Sign in</button>
+                    </div>
+                     <nav>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-search fa-2x"></i></a>
+                              <ul>
+                                <li>
+                                  <form name="search">
+                                    <input type="text" name="Search" placeholder="Search">
+                                  </form>
+                                </li>
+                              </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-th-list fa-2x"></i></a></li>
+                            <li><a href="#"><i class="fa fa-th-large fa-2x"></i></a></li>
+                            <div class="clear"></div>
+                        </ul>
+                        <div class="clear"></div>
+                    </nav>
+                     <div class="clear"></div>
+                 </div>
+            </header>
+        <!-- Add your site or application content here -->
+        <div class="container closed">
+            <div class="content">
+             <div class="clear"></div>
+            <section class="books">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="http://placehold.it/325x200">
+                            <h2>Title</h2>
+                            <p>Crash justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </div>
+                        <a href="#">
+                            <span class="fa fa-user fa-lg"></span>
+                            <p>User</p>
+                            <span class="fa fa-book fa-lg"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://placehold.it/325x200">
+                            <h2>Title</h2>
+                            <p>Crash justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </div>
+                        <a href="#">
+                            <span class="fa fa-user fa-lg"></span>
+                            <p>User</p>
+                            <span class="fa fa-book fa-lg"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://placehold.it/325x200">
+                            <h2>Title</h2>
+                            <p>Crash justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </div>
+                        <a href="#">
+                            <span class="fa fa-user fa-lg"></span>
+                            <p>User</p>
+                            <span class="fa fa-book fa-lg"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://placehold.it/325x200">
+                            <h2>Title</h2>
+                            <p>Crash justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </div>
+                        <a href="#">
+                            <span class="fa fa-user fa-lg"></span>
+                            <p>User</p>
+                            <span class="fa fa-book fa-lg"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://placehold.it/325x200">
+                            <h2>Title</h2>
+                            <p>Crash justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </div>
+                        <a href="#">
+                            <span class="fa fa-user fa-lg"></span>
+                            <p>User</p>
+                            <span class="fa fa-book fa-lg"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://placehold.it/325x200">
+                            <h2>Title</h2>
+                            <p>Crash justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                        </div>
+                        <a href="#">
+                            <span class="fa fa-user fa-lg"></span>
+                            <p>User</p>
+                            <span class="fa fa-book fa-lg"></span>
+                        </a>
+                    </li>
+                     <div class="clear"></div>
+                </ul>
+                 <div class="clear"></div>
+            </section>
+            <section class="pagination">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                      <div class="clear"></div>
+                </ul>
+                  <div class="clear"></div>
+            </section>
+            </div>
         </div>
-         <nav>
-          <ul>
-            <li>Search</li>
-            <li>Arrange-1</li>
-            <li>Arrange-2</li>
-          </ul>
-        </nav>
-      </header>
-
-    <div class="container">
-        <div class="sixteen columns">
-            <h1 class="remove-bottom" style="margin-top: 40px">Ribs</h1>
-            <h5>Version 1.0.9</h5>
-            <hr />
-        </div>
-        <div class="two column">
-            <h3>About Ribs</h3>
-            <p>Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
-            <p>Ribs is the evolution of the original Skeleton Project.</p>
-        </div>
-        <div class="two column">
-            <h3>Three Core Principles</h3>
-            <p>Skeleton is built on three core principles:</p>
-            <ul class="square">
-                <li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
-                <li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
-                <li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
-            </ul>
-        </div>
-        <div class="third column">
-            <h3>Docs &amp; Support</h3>
-            <p>The easiest way to really get started with Ribs is to check out the original skeleton docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a> - this is the main set of docs for the original css project, but will provide all of the needed insight. Ribs is open-source and has a <a href="https://github.com/nickpack/Ribs">project on github</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:nick@nickpack.com">nick@nickpack.com</a>.</p>
+        <div id="test" class="closed">
+           <form name="input">
+            <label>Username:</label><input type="text" name="firstname"/><br/>
+            <label>Password:</label><input type="password" name="lastname"/>
+            <input type="submit" value="Log in">
+</form>
         </div>
 
-         <div class="third column">
-            <h3>Docs &amp; Support</h3>
-            <p>The easiest way to really get started with Ribs is to check out the original skeleton docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a> - this is the main set of docs for the original css project, but will provide all of the needed insight. Ribs is open-source and has a <a href="https://github.com/nickpack/Ribs">project on github</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:nick@nickpack.com">nick@nickpack.com</a>.</p>
-        </div>
-    </div><!-- container -->
 
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!-- <script src="test/test.js"></script> -->
 
-<!-- End Document
-================================================== -->
-  <script type="text/javascript" src="js/main.js"></script>
-
-</body>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            /*(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');*/
+        </script>
+    </body>
 </html>
