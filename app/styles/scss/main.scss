@@ -53,9 +53,9 @@
                 }
               }
             }
-            &:hover ul{
+           /* &:hover ul{
                 display:inline-block;
-              }
+              }*/
              &:hover > a{
               background-color: #fff;
               color: #323a45;
@@ -248,4 +248,20 @@
 }
 .closed{
   opacity: 1;
+}
+.grid-list{
+  .books ul li{
+    width: 97%;
+    a{
+      clear:both;
+    }
+    img{
+      width:200px;
+      float:left;
+      padding-right: 30px;
+    }
+    h2, p{
+      text-align:left;
+    }
+  }
 }

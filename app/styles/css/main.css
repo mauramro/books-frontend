@@ -154,6 +154,9 @@ header > div nav > ul > li {
   width: 65px;
   height: 49px;
   float: left;
+  /* &:hover ul{
+       display:inline-block;
+     }*/
 }
 /* line 33, ../scss/main.scss */
 header > div nav > ul > li a {
@@ -179,10 +182,6 @@ header > div nav > ul > li ul form input {
   border: 1px solid grey;
   margin: 5px;
   font-size: 0.9em;
-}
-/* line 56, ../scss/main.scss */
-header > div nav > ul > li:hover ul {
-  display: inline-block;
 }
 /* line 59, ../scss/main.scss */
 header > div nav > ul > li:hover > a {
@@ -404,4 +403,23 @@ section.pagination ul li:hover {
 /* line 249, ../scss/main.scss */
 .closed {
   opacity: 1;
+}
+
+/* line 253, ../scss/main.scss */
+.grid-list .books ul li {
+  width: 97%;
+}
+/* line 255, ../scss/main.scss */
+.grid-list .books ul li a {
+  clear: both;
+}
+/* line 258, ../scss/main.scss */
+.grid-list .books ul li img {
+  width: 200px;
+  float: left;
+  padding-right: 30px;
+}
+/* line 263, ../scss/main.scss */
+.grid-list .books ul li h2, .grid-list .books ul li p {
+  text-align: left;
 }

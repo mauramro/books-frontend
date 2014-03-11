@@ -1,43 +1,36 @@
 /*function login(){*/
-
+var container = document.getElementsByClassName("container")[1];
   function hasClass(element, cls) {
     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
   }
 
    Element.prototype.toggle = function() {
     if ( this.style.display == '' || this.style.display == 'none' ) {
-        //alert ( "Changing display to NONE ");
-        this.style.display = 'block';
+        //alert ( "Changing display to BLOCK ");
+        this.style.display = 'inline-block';
     }else{
         this.style.display = 'none';
-        //alert ( "Changing display to BLOCK ");
+        //alert ( "Changing display to NONE ");
       }
     }
 
   console.log(document.getElementsByTagName("button")[0]);
   document.getElementsByTagName("button")[0].onclick = function(event){
   event.preventDefault();
-  //console.log("test");
 
-
-
-  var container = document.getElementsByClassName("container")[1];
   var login = document.getElementById("test");
 
   if(hasClass(container, 'closed') == true){
-    container.className = '';
-    container.className = 'container , open';
+   /* container.className = '';
+    container.className = 'container , open';*/
+    container.classList.add('open');
     login.toggle();
     //alert("clos");
   }else{
-    container.className = 'container , closed';
+    container.classList.remove('open');
+    container.classList.add('closed');
     login.toggle();
   }
-
-
-  /*if(container.hasClass() = "closed"){
-    alert("test");
-  }*/
 
   //document.getElementById("#test").slideToggle();
  /* if(container.hasClass(container, "closed")){
@@ -49,6 +42,30 @@
   }*/
 };
 
+var search = document.getElementById('search');
+var dropdown = document.getElementById('search-dropdown');
+  console.log(search);
+  search.onclick = function(){
+    dropdown.toggle();
+  }
+
+var grid = document.getElementById('grid-list');
+var block = document.getElementById('block-list');
+grid.onclick = function(){
+  container.classList.add('grid-list');
+}
+block.onclick = function(){
+  container.classList.remove('grid-list');
+}
+
+/*document.onmouseup = function(e){
+  var container = document.getElementById('test');
+  alert('test')
+
+    if(!container.is(e.target) && container.has(e.target).lenght === 0){
+      alert('test');
+    }
+};*/
 /*$(document).mouseup(function (e)
 {
     var container = $("#test");
