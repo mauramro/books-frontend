@@ -2,6 +2,8 @@
 @import "media-query-1200";
 @import "media-query-980";
 @import "media-query-768";
+@import "media-query-640";
+@import "media-query-480";
 @import "compass/utilities/sprites";
 /*@import "sprites/*.png";
 @include all-sprites-sprites(true);*/
@@ -259,6 +261,9 @@
       width:200px;
       float:left;
       padding-right: 30px;
+    }
+     h2{
+      padding-top: 25px;
     }
     h2, p{
       text-align:left;
